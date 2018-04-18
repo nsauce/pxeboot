@@ -66,7 +66,7 @@ set util_file gparted-live-${gparted_version}-amd64.iso
 goto boot_memdisk
 
 :memtest-501
-set util_path boot.netboot.xyz/utils/memtest86-5.01.0
+set util_path boot.degree9.io/utils/memtest86-5.01.0
 set util_file memtest86-5.01.0
 goto boot_memtest
 
@@ -137,7 +137,7 @@ goto utils_exit
 :nbxyz-custom
 echo EXPERIMENTAL
 echo 
-echo Make sure you have a fork of https://github.com/antonym/netboot.xyz-custom.
+echo Make sure you have a fork of https://github.com/degree9/pxeboot-custom.
 echo You can then customize your fork as needed and set up your own custom options.
 echo Once your username is set, a custom option will appear on the main menu.
 echo

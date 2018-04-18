@@ -8,7 +8,7 @@ netboot.xyz right out of the box.
 Once you've logged into the console, select ISOs.  In the remote URLs box,
 enter in the URL of a netboot.xyz ISO and press upload:
 
-    https://boot.netboot.xyz/ipxe/netboot.xyz.iso
+    https://boot.degree9.io/ipxe/netboot.xyz.iso
 
 Go back to the main console screen and press "Deploy New Instance". Follow
 these steps:
@@ -34,7 +34,7 @@ Using an iPXE chain url may be easier for some users.  Follow these steps:
 * Click _Deploy New Instance_
 * Select _Custom_ for the operating system
 * Select _iPXE_ in the Virtual ISO section
-* Set the chain URL to `https://boot.netboot.xyz`
+* Set the chain URL to `https://boot.degree9.io`
 * Click _Place Order_
 
 The instance will boot within a few minutes.  Once it boots, you'll have five

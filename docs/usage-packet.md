@@ -13,7 +13,7 @@ slug when using the API.
 Put the netboot.xyz URL in the text field that appears in the portal, or use the
 `ipxe_script_url` parameter when creating the device via the API.
 
-    https://boot.netboot.xyz
+    https://boot.degree9.io
 
 Press "Deploy" to provision your device. It will take 2-3 minutes for the device
 to become active. Once it's online, connect to Packet's out-of-band serial-over-SSH

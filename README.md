@@ -1,25 +1,25 @@
 ## netboot.xyz
 
-[![Build Status](https://travis-ci.org/antonym/netboot.xyz.svg?branch=master)](https://travis-ci.org/antonym/netboot.xyz)
+[![Build Status](https://travis-ci.org/degree9/pxeboot.svg?branch=master)](https://travis-ci.org/degree9/pxeboot)
 
 ![netboot.xyz menu](http://netbootxyz.readthedocs.org/en/latest/img/netboot.xyz.gif)
 
 ### Bootloader Downloads
 
-These iPXE disks will automatically load into [boot.netboot.xyz](https://boot.netboot.xyz):
+These iPXE disks will automatically load into [boot.degree9.io](https://boot.degree9.io):
 
 | Type | Bootloader | Description |
 |------|------------|-------------|
-|ISO (Legacy)| [netboot.xyz.iso](https://boot.netboot.xyz/ipxe/netboot.xyz.iso)| Used for CD/DVD, Virtual CDs like DRAC/iLO, VMware, Virtual Box (Legacy) |
-|ISO (EFI)|[netboot.xyz-efi.iso](https://boot.netboot.xyz/ipxe/netboot.xyz-efi.iso)| Same as ISO (Legacy) but used for EFI BIOS, works in Virtual Box EFI mode |
-|Floppy| [netboot.xyz.dsk](https://boot.netboot.xyz/ipxe/netboot.xyz.dsk)| Used for 1.44 MB floppies, Virtual floppies like DRAC/iLO, VMware, Virtual Box|
-|USB| [netboot.xyz.usb](https://boot.netboot.xyz/ipxe/netboot.xyz.usb)| Used for creation of USB Keys|
-|Kernel| [netboot.xyz.lkrn](https://boot.netboot.xyz/ipxe/netboot.xyz.lkrn)| Used for booting from GRUB/EXTLINUX|
-|DHCP| [netboot.xyz.kpxe](https://boot.netboot.xyz/ipxe/netboot.xyz.kpxe)| DHCP boot image file, uses built-in iPXE NIC drivers|
-|DHCP-undionly| [netboot.xyz-undionly.kpxe](https://boot.netboot.xyz/ipxe/netboot.xyz-undionly.kpxe)| DHCP boot image file, use if you have NIC issues|
-|EFI| [netboot.xyz.efi](https://boot.netboot.xyz/ipxe/netboot.xyz.efi)| EFI boot image file|
+|ISO (Legacy)| [netboot.xyz.iso](https://boot.degree9.io/ipxe/netboot.xyz.iso)| Used for CD/DVD, Virtual CDs like DRAC/iLO, VMware, Virtual Box (Legacy) |
+|ISO (EFI)|[netboot.xyz-efi.iso](https://boot.degree9.io/ipxe/netboot.xyz-efi.iso)| Same as ISO (Legacy) but used for EFI BIOS, works in Virtual Box EFI mode |
+|Floppy| [netboot.xyz.dsk](https://boot.degree9.io/ipxe/netboot.xyz.dsk)| Used for 1.44 MB floppies, Virtual floppies like DRAC/iLO, VMware, Virtual Box|
+|USB| [netboot.xyz.usb](https://boot.degree9.io/ipxe/netboot.xyz.usb)| Used for creation of USB Keys|
+|Kernel| [netboot.xyz.lkrn](https://boot.degree9.io/ipxe/netboot.xyz.lkrn)| Used for booting from GRUB/EXTLINUX|
+|DHCP| [netboot.xyz.kpxe](https://boot.degree9.io/ipxe/netboot.xyz.kpxe)| DHCP boot image file, uses built-in iPXE NIC drivers|
+|DHCP-undionly| [netboot.xyz-undionly.kpxe](https://boot.degree9.io/ipxe/netboot.xyz-undionly.kpxe)| DHCP boot image file, use if you have NIC issues|
+|EFI| [netboot.xyz.efi](https://boot.degree9.io/ipxe/netboot.xyz.efi)| EFI boot image file|
 
-SHA256 checksums are generated during each build of iPXE and are located [here](https://boot.netboot.xyz/ipxe/netboot.xyz-sha256-checksums.txt).  You can also view the scripts that are embedded into the images [here](https://github.com/antonym/netboot.xyz/tree/master/ipxe/disks).
+SHA256 checksums are generated during each build of iPXE and are located [here](https://boot.degree9.io/ipxe/netboot.xyz-sha256-checksums.txt).  You can also view the scripts that are embedded into the images [here](https://github.com/degree9/pxeboot/tree/master/ipxe/disks).
 
 ### What is netboot.xyz?
 
@@ -27,7 +27,7 @@ SHA256 checksums are generated during each build of iPXE and are located [here](
 
 If you already have iPXE up and running on the network, you can hit netboot.xyz at anytime by typing:
 
-    chain --autofree https://boot.netboot.xyz
+    chain --autofree https://boot.degree9.io
 
 You'll need to make sure to have [DOWNLOAD_PROTO_HTTPS](https://github.com/ipxe/ipxe/blob/master/src/config/general.h#L56) enabled in iPXE.
 
@@ -87,9 +87,9 @@ Full documentation is at ReadTheDocs:
 
 #### Testing New Branches
 
-Under the **Utilities** menu on netboot.xyz, there's an option for ["Test netboot.xyz branch"](https://github.com/antonym/netboot.xyz/blob/master/src/utils.ipxe#L157).  If you've forked the code and have developed a new feature branch, you can use this option to chainload into that branch to test and validate the code.  All you need to do is specify your Github user name and the name of your branch or abbreviated hash of the commit. Also, disable the signature verification for *netboot.xyz* under **Signatures Checks**.
+Under the **Utilities** menu on netboot.xyz, there's an option for ["Test netboot.xyz branch"](https://github.com/degree9/pxeboot/blob/master/src/utils.ipxe#L157).  If you've forked the code and have developed a new feature branch, you can use this option to chainload into that branch to test and validate the code.  All you need to do is specify your Github user name and the name of your branch or abbreviated hash of the commit. Also, disable the signature verification for *netboot.xyz* under **Signatures Checks**.
 
 #### Feedback
 
-Feel free to open up an [issue](https://github.com/antonym/netboot.xyz/issues) on Github, swing by [Freenode IRC](http://freenode.net/) in the [#netbootxyz](http://webchat.freenode.net/?channels=#netbootxyz) channel, or ping us on [Gitter](https://gitter.im/antonym/netboot.xyz?utm_source=share-link&utm_medium=link&utm_campaign=share-link).  Follow us on [Twitter](https://twitter.com/netbootxyz) or like us on [Facebook](https://www.facebook.com/netboot.xyz)!
+Feel free to open up an [issue](https://github.com/degree9/pxeboot/issues) on Github, swing by [Freenode IRC](http://freenode.net/) in the [#netbootxyz](http://webchat.freenode.net/?channels=#netbootxyz) channel, or ping us on [Gitter](https://gitter.im/degree9/pxeboot?utm_source=share-link&utm_medium=link&utm_campaign=share-link).  Follow us on [Twitter](https://twitter.com/netbootxyz) or like us on [Facebook](https://www.facebook.com/netboot.xyz)!
 

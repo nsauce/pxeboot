@@ -4,7 +4,7 @@
 
 Download a netboot.xyz USB disk:
 
-* [netboot.xyz](https://boot.netboot.xyz/ipxe/netboot.xyz.usb) 
+* [netboot.xyz](https://boot.degree9.io/ipxe/netboot.xyz.usb) 
 
 ## Creating USB Key on Linux
 

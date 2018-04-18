@@ -17,7 +17,7 @@ deploy:
     local_dir: build
     skip_cleanup: true
     on:
-      repo: antonym/netboot.xyz
+      repo: degree9/pxeboot
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY_ID
     secret_access_key: $AWS_SECRET_ACCESS_KEY
@@ -25,7 +25,7 @@ deploy:
     local_dir: site
     skip_cleanup: true
     on:
-      repo: antonym/netboot.xyz
+      repo: degree9/pxeboot
 after_deploy:
   - aws configure set preview.cloudfront true
   - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DIST_ID_BOOT --paths "/*"

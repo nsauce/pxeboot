@@ -10,7 +10,7 @@
 
 Set a name for your bucket and select the regional storage class.
 
-Upload the netboot.xyz-gce image from this [link](https://boot.netboot.xyz/ipxe/netboot.xyz-gce.tar.gz) to the root of your bucket.
+Upload the netboot.xyz-gce image from this [link](https://boot.degree9.io/ipxe/netboot.xyz-gce.tar.gz) to the root of your bucket.
 
     gsutil cp $tmp/$image_name.tar.gz gs://$gs_bucket
 
