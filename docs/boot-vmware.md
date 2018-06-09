@@ -9,7 +9,7 @@ These instructions are for setting up netboot.xyz in a VM on VMware's Fusion for
 * Add a new virtual machine.
 * Select "Install from disc or image".
 * Click on "Use another disk or disc image...".
-* Download and select the netboot.xyz [ISO](https://boot.netboot.xyz/ipxe/netboot.xyz.iso).
+* Download and select the netboot.xyz [ISO](https://boot.degree9.io/ipxe/netboot.xyz.iso).
 * On the Choose Operating System Screen, select the OS type you are planning on installing.  If you plan on testing multiple types of installs, you can just choose a CentOS 64-bit OS.
 * Click the "Customize Settings" and give the VM a name, like "netboot.xyz".
 

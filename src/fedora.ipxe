@@ -1,7 +1,7 @@
 #!ipxe
 
 # Fedora Operating System
-# http://wwww.fedora.org
+# https://getfedora.org/
 
 goto ${menu} ||
 
@@ -12,22 +12,22 @@ clear ova
 set os Fedora
 menu Fedora - ${arch} - Image Sig Checks: [${img_sigs_enabled}]
 item --gap Latest Releases
-item 25 ${space} ${os} 25
-item 24 ${space} ${os} 24
-item 23 ${space} ${os} 23
-item 22 ${space} ${os} 22
-item 21 ${space} ${os} 21
+item 27 ${space} ${os} 27
+item 26 ${space} ${os} 26
 isset ${osversion} || choose osversion || goto linux_menu
 set ova ${os} ${osversion}
 goto product_sku
 
 :product_sku
 menu ${os} ${arch} sku type
+item Everything ${ova} Everything
 item Server ${ova} Server
 item Workstation ${ova} Workstation
-item Cloud_Atomic ${ova} Cloud Atomic
+item Atomic ${ova} Atomic
 isset ${sku_type} || choose sku_type || goto fedora
-set dir fedora/releases/${osversion}/${sku_type}/${arch}/os
+set dir ${fedora_base_dir}/releases/${osversion}/${sku_type}/${arch}/os
+iseq ${sku_type} Atomic && iseq ${osversion} 27 && set dir fedora-alt/atomic/stable/Fedora-Atomic-27-20171211.0/Atomic/x86_64/os ||
+iseq ${sku_type} Atomic && iseq ${osversion} 26 && set dir fedora-alt/atomic/stable/Fedora-Atomic-26-20171030.0/Atomic/x86_64/os ||
 set ova ${ova} ${sku_type}
 echo ${cls}
 goto boottype
@@ -54,8 +54,8 @@ goto boot
 
 :boot
 imgfree
-kernel http://${mirror}/${dir}/images/pxeboot/vmlinuz repo=http://${mirror}/${dir} ${params}
-initrd http://${mirror}/${dir}/images/pxeboot/initrd.img
+kernel http://${fedora_mirror}/${dir}/images/pxeboot/vmlinuz repo=http://${fedora_mirror}/${dir} ${params} ${console} initrd=initrd.img
+initrd http://${fedora_mirror}/${dir}/images/pxeboot/initrd.img
 echo
 echo MD5sums:
 md5sum vmlinuz initrd.img

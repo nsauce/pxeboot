@@ -3,17 +3,20 @@ set esc:hex 1b
 set bold ${esc:string}[1m
 set boldoff ${esc:string}[22m
 set fg_gre ${esc:string}[32m
+set fg_red ${esc:string}[31m
 set fg_cya ${esc:string}[36m
 set fg_whi ${esc:string}[37m
 set HTTPS_ERR HTTPS appears to have failed... attempting HTTP
 set HTTP_ERR HTTP has failed, localbooting...
 set version 1.04
+set ipxe_cloud_config packet
 
 :start
-echo ${bold}${fg_gre}netboot.xyz ${fg_whi}v${version}${boldoff}
+echo ${bold}${fg_gre}netboot.xyz ${fg_whi}v${version} for ${fg_red}packet.net${fg_whi}${boldoff}
 prompt --key m --timeout 4000 Hit the ${bold}m${boldoff} key to open failsafe menu... && goto failsafe || goto dhcp
 
 :dhcp
+echo
 dhcp || goto netconfig
 goto menu
 
@@ -44,10 +47,10 @@ goto menu || goto failsafe
 
 :menu
 set conn_type https
-chain --autofree https://boot.netboot.xyz/menu.ipxe || echo ${HTTPS_ERR}
+chain --autofree https://boot.degree9.io/menu.ipxe || echo ${HTTPS_ERR}
 sleep 5
 set conn_type http
-chain --autofree http://boot.netboot.xyz/menu.ipxe || echo ${HTTP_ERR}
+chain --autofree http://boot.degree9.io/menu.ipxe || echo ${HTTP_ERR}
 goto localboot
 
 :localboot

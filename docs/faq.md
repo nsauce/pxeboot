@@ -16,7 +16,7 @@ You can read more about my thoughts and possible solutions [here](https://www.re
 ## My distribution uses ISOs for delivery, how can I see if they work?
 You can do a quick check by loading up netboot.xyz in a virtual environment baremetal.  Make sure you have plenty of RAM as you are loading the ISO into RAM.  Then select the iPXE command line and enter the following;
 
-    kernel https://boot.netboot.xyz/memdisk iso raw
+    kernel https://boot.degree9.io/memdisk iso raw
     initrd http://url/to/iso
     boot
 
@@ -24,7 +24,7 @@ That should load the ISO and if you make it all the way into the installer, grea
 
 ## Can I create my own configurations?
 
-Yes!  You can fork [netboot.xyz-custom](https://github.com/antonym/netboot.xyz-custom) and create your own menu.  You can then set your Github user from the Utility menu and your menu will show up in the main menu.  If you don't want to set your user every time, you can custom compile the netboot.xyz iPXE code and include your github_user during the compile.  This allows you to create your own menu without the maintenance of everything else.
+Yes!  You can fork [netboot.xyz-custom](https://github.com/degree9/pxeboot-custom) and create your own menu.  You can then set your Github user from the Utility menu and your menu will show up in the main menu.  If you don't want to set your user every time, you can custom compile the netboot.xyz iPXE code and include your github_user during the compile.  This allows you to create your own menu without the maintenance of everything else.
 
 ## What are some good resources for learning more about network booting?
 
