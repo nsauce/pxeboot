@@ -30,16 +30,9 @@ set util_path nightly.altlinux.org/p8/release/alt-p8-rescue-20170312-i586.iso
 set util_file alt-p8-rescue-20170312-i586.iso
 goto boot_memdisk
 
-<<<<<<< HEAD
-:clonezilla
-set clonezilla_version 2.5.0-5
-set util_path sourceforge.net/projects/clonezilla/files/clonezilla_live_stable/${clonezilla_version}/clonezilla-live-${clonezilla_version}-amd64.iso/download
-set util_file clonezilla-live-${clonezilla_version}-amd64.iso
-=======
 :alt_linux_rescue_x64
 set util_path nightly.altlinux.org/p8/release/alt-p8-rescue-20170312-x86_64.iso
 set util_file alt-p8-rescue-20170312-x86_64.iso
->>>>>>> bc673c49ea80b99397d0d5a686623949b5829840
 goto boot_memdisk
 
 :avg
@@ -143,13 +136,13 @@ goto utils_exit
 
 :nbxyz-custom
 echo EXPERIMENTAL
-echo 
+echo
 echo Make sure you have a fork of https://github.com/degree9/pxeboot-custom.
 echo You can then customize your fork as needed and set up your own custom options.
 echo Once your username is set, a custom option will appear on the main menu.
 echo
 echo -n Please enter your Github username: ${} && read github_user
-goto utils_exit 
+goto utils_exit
 
 :testdistro
 echo This option will allow you to test booting an ISO using memdisk. Please

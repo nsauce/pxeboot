@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu:xenial as ipxe
 
 # Update the package repository and install applications
 RUN apt-get -qq update
@@ -21,3 +21,11 @@ RUN git clone --depth 1 git://git.ipxe.org/ipxe.git /ipxe_build
 WORKDIR /ipxe_build/src
 
 ENTRYPOINT ["make"]
+
+FROM ipxe as netboot
+
+# Copy iPXE config and overrides
+COPY ./ipxe/local/* /ipxe_build/src/config/local/
+
+#
+COPY ./src/* /ipxe_build/src/
